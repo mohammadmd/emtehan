@@ -1,0 +1,294 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="src/sass/style.scss">
+    <title></title>
+    <script type="module" src="src/js/script.js"></script>
+  </head>
+  <body>
+    <div class="container" id="container1">
+      <h1 style="margin-left: 2%;">Restaurant Menu</h1>
+      <div class="tabs" style="margin-left: 5%;">
+        <button class="tab" data-category="Pizzas" onclick="showPizzas()">Pizzas</button>
+        <button class="tab" data-category="Burgers" style="margin-left: -2%;" onclick="showBurgers()">Burgers</button>
+        <button class="tab" data-category="Drinks" style="margin-left: 0%;" onclick="showDrinks()">Drinks</button>
+      </div>
+      <div class="food-container" style="margin-left: 3%">
+        <div class="food-card">
+          <img src="images/pizzas/pizza1.webp" alt="">
+          <h3>Pepperoni Pizza</h3>
+          <div class="price">$12.99</div>
+          <div class="ingredients">Pepperoni,
+            Mozzarella cheese,
+            Tomato sauce,
+            Fresh basil</div>
+            <div class="cart-buttons">
+              <button onclick="decrement(1)">-</button>
+              <span id="counter1" class="counter">0</span>
+              <button onclick="increment(1)">+</button>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="images/pizzas/pizza1.webp" alt="">
+          <h3>Pepperoni Pizza</h3>
+          <div class="price">$12.99</div>
+          <div class="ingredients">Pepperoni,
+            Mozzarella cheese,
+            Tomato sauce,
+            Fresh basil</div>
+            <div class="cart-buttons">
+              <button onclick="decrement(2)">-</button>
+              <span id="counter2" class="counter">0</span>
+              <button onclick="increment(2)">+</button>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="images/pizzas/pizza2.webp" alt="">
+          <h3>Margherita Pizza</h3>
+          <div class="price">$14.99</div>
+          <div class="ingredients">Tomato sauce, Mozzarella cheese, Fresh basil</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(3)">-</button>
+            <span id="counter3" class="counter">0</span>
+            <button onclick="increment(3)">+</button>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="images/pizzas/pizza3.webp" alt="">
+          <h3>Meat Lover's Pizza</h3>
+          <div class="price">$16.99</div>
+          <div class="ingredients">Pepperoni, Sausage, Bacon, Mozzarella cheese, Tomato sauce</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(4)">-</button>
+            <span id="counter4" class="counter">0</span>
+            <button onclick="increment(4)">+</button>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="images/pizzas/pizza4.webp" alt="">
+          <h3>Hawaiian Pizza</h3>
+          <div class="price">$13.99</div>
+          <div class="ingredients">Ham, Pineapple, Mozzarella cheese, Tomato sauce</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(5)">-</button>
+            <span id="counter5" class="counter">0</span>
+            <button onclick="increment(5)">+</button>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="images/pizzas/pizza5.webp" alt="">
+          <h3>BBQ Chicken Pizza</h3>
+          <div class="price">$14.99</div>
+          <div class="ingredients">Chicken, BBQ sauce, Mozzarella cheese, Red onion</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(6)">-</button>
+            <span id="counter6" class="counter">0</span>
+            <button onclick="increment(6)">+</button>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="images/pizzas/pizza6.webp" alt="">
+          <h3>Veggie Pizza</h3>
+          <div class="price">$12.99</div>
+          <div class="ingredients">Tomato sauce, Mozzarella cheese, Mushrooms, Onions, Bell peppers</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(7)">-</button>
+            <span id="counter7" class="counter">0</span>
+            <button onclick="increment(7)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="container2" style="display: none;">
+      <h1 style="margin-left: 2%;">Restaurant Menu</h1>
+      <div class="tabs" style="margin-left: 5%;">
+        <button class="tab" data-category="Pizzas" onclick="showPizzas()">Pizzas</button>
+        <button class="tab" data-category="Burgers" style="margin-left: -2%;" onclick="showBurgers()">Burgers</button>
+        <button class="tab" data-category="Drinks" style="margin-left: 0%;" onclick="showDrinks()">Drinks</button>
+      </div>
+      <div class="food-container" style="margin-left: 3%">
+        <div class="food-card">
+          <img src="images/burgers/burger1.webp" alt="">
+          <h3>Cheeseburger</h3>
+          <div class="price">$8.99</div>
+          <div class="ingredients">Beef patty, Cheddar cheese, Lettuce, Tomato, Onion</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(8)">-</button>
+            <span id="counter8" class="counter">0</span>
+            <button onclick="increment(8)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/burgers/burger2.webp" alt="">
+          <h3>Bacon Cheeseburger</h3>
+          <div class="price">$10.99</div>
+          <div class="ingredients">Beef patty, Cheddar cheese, Bacon, Lettuce, Tomato, Onion</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(9)">-</button>
+            <span id="counter9" class="counter">0</span>
+            <button onclick="increment(9)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/burgers/burger3.webp" alt="">
+          <h3>Chicken Burger</h3>
+          <div class="price">$9.99</div>
+          <div class="ingredients">Chicken patty, Lettuce, Tomato, Onion, Mayonnaise</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(10)">-</button>
+            <span id="counter10" class="counter">0</span>
+            <button onclick="increment(10)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/burgers/burger4.webp" alt="">
+          <h3>Veggie Burger</h3>
+          <div class="price">$8.99</div>
+          <div class="ingredients">Veggie patty, Lettuce, Tomato, Onion, Mayonnaise</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(11)">-</button>
+            <span id="counter11" class="counter">0</span>
+            <button onclick="increment(11)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/burgers/burger5.webp" alt="">
+          <h3>Mushroom Swiss Burger</h3>
+          <div class="price">$10.99</div>
+          <div class="ingredients">Beef patty, Mushrooms, Swiss cheese, Lettuce, Tomato, Onion</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(12)">-</button>
+            <span id="counter12" class="counter">0</span>
+            <button onclick="increment(12)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/burgers/burger6.webp" alt="">
+          <h3>Jalapeno Popper Burger</h3>
+          <div class="price">$11.99</div>
+          <div class="ingredients">Beef patty, Jalapeno peppers, Cream cheese, Bacon, Lettuce, Tomato, Onion</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(13)">-</button>
+            <span id="counter13" class="counter">0</span>
+            <button onclick="increment(13)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/burgers/burger7.webp" alt="">
+          <h3>Bacon Cheese Fries Burger</h3>
+          <div class="price">$12.99</div>
+          <div class="ingredients">Beef patty, Cheddar cheese, Bacon, Fresh basil</div>
+          <div class="cart-buttons">
+            <button onclick="decrement(14)">-</button>
+            <span id="counter14" class="counter">0</span>
+            <button onclick="increment(14)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="container3" style="display: none;">
+      <h1 style="margin-left: 2%;">Restaurant Menu</h1>
+      <div class="tabs" style="margin-left: 5%;">
+        <button class="tab" data-category="Pizzas" onclick="showPizzas()">Pizzas</button>
+        <button class="tab" data-category="Burgers" style="margin-left: -2%;" onclick="showBurgers()">Burgers</button>
+        <button class="tab" data-category="Drinks" style="margin-left: 0%;" onclick="showDrinks()">Drinks</button>
+      </div>
+      <div class="food-container" style="margin-left: 3%">
+        <div class="food-card">
+          <img src="images/drinks/drink1.webp" alt="">
+          <h3>Coca-Cola</h3>
+          <div class="price">$2.99</div>
+          <div class="ingredients"></div>
+          <div class="cart-buttons">
+            <button onclick="decrement(15)">-</button>
+            <span id="counter15" class="counter">0</span>
+            <button onclick="increment(15)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/drinks/drink2.webp" alt="">
+          <h3>Fanta</h3>
+          <div class="price">$2.99</div>
+          <div class="ingredients"></div>
+          <div class="cart-buttons">
+            <button onclick="decrement(16)">-</button>
+            <span id="counter16" class="counter">0</span>
+            <button onclick="increment(16)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/drinks/drink3.webp" alt="">
+          <h3>Sprtie</h3>
+          <div class="price">$2.99</div>
+          <div class="ingredients"></div>
+          <div class="cart-buttons">
+            <button onclick="decrement(17)">-</button>
+            <span id="counter17" class="counter">0</span>
+            <button onclick="increment(17)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/drinks/drink4.webp" alt="">
+          <h3>Diet coke</h3>
+          <div class="price">$2.99</div>
+          <div class="ingredients"></div>
+          <div class="cart-buttons">
+            <button onclick="decrement(18)">-</button>
+            <span id="counter18" class="counter">0</span>
+            <button onclick="increment(18)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/drinks/drink5.webp" alt="">
+          <h3>Iced Tea</h3>
+          <div class="price">$1.99</div>
+          <div class="ingredients"></div>
+          <div class="cart-buttons">
+            <button onclick="decrement(19)">-</button>
+            <span id="counter19" class="counter">0</span>
+            <button onclick="increment(19)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/drinks/drink6.webp" alt="">
+          <h3>Lemoandes</h3>
+          <div class="price">$2.99</div>
+          <div class="ingredients"></div>
+          <div class="cart-buttons">
+            <button onclick="decrement(20)">-</button>
+            <span id="counter20" class="counter">0</span>
+            <button onclick="increment(20)">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+          <img src="images/drinks/drink7.webp" alt="">
+          <h3>Soda Water</h3>
+          <div class="price">$1.99</div>
+          <div class="ingredients"></div>
+          <div class="cart-buttons">
+            <button onclick="decrement(21)">-</button>
+            <span id="counter21" class="counter">0</span>
+            <button onclick="increment(21)">+</button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="cart">
+        <h2>Cart: <span id="cart-count">0</span> items</h2>
+        <p>Total Price: $<span id="total-price">0.00</span></p>
+      </div>
+    
+  </body>
+</html>

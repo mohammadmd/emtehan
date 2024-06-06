@@ -1,0 +1,16 @@
+{
+  "name": "last",
+  "version": "1.0.0",
+  "description": "emtehan web",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "mohammad hassan shukuhi",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "sass": "^1.77.4"
+  }
+}
